@@ -53,4 +53,18 @@ class EnderecoModel extends Model
         }
     }
 
+    public function getBairrosByIdCidade(int $id_cidade)
+    {
+        try
+        {
+            $dao = new EnderecoDAO();
+
+            $this-> rows = $dao->selectedBairrosByIdCidade($id_cidade);
+        }catch(Exception $e)
+        {
+            echo $e-> getMessage();
+        }
+
+    }
+
 }
