@@ -2,7 +2,7 @@
 
 namespace ApiCep\Controller;
 
-use App\Model\{EnderecoModel, CidadeModel};
+use ApiCep\Model\{EnderecoModel, CidadeModel};
 use Exception;
 
 class EnderecoController extends Controller
@@ -69,7 +69,7 @@ class EnderecoController extends Controller
         try
         {
             $id_cidade = parent::getIntFromUrl(
-            isset ($_GE['id)cidade'])? $_GET['id_cidade']:null);
+            isset ($_GET['id_cidade'])? $_GET['id_cidade']:null);
 
             $model = new EnderecoModel();
             $model->getBairrosByIdCidade($id_cidade);

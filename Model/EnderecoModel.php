@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Model;
+namespace ApiCep\Model;
 
-use App\DAO\EnderecoDAO;
+use ApiCep\DAO\EnderecoDAO;
 use Exception;
 
 class EnderecoModel extends Model 
@@ -59,7 +59,7 @@ class EnderecoModel extends Model
         {
             $dao = new EnderecoDAO();
 
-            $this-> rows = $dao->selectedBairrosByIdCidade($id_cidade);
+            $this-> rows = $dao->selectBairrosByIdCidade($id_cidade);
         }catch(Exception $e)
         {
             echo $e-> getMessage();

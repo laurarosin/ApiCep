@@ -1,9 +1,9 @@
 <?php
 
-namespace App\DAO;
+namespace ApiCep\DAO;
 
 use ApiCep\DAO\DAO;
-use App\Model\EnderecoModel;
+use ApiCep\Model\EnderecoModel;
 
 class EnderecoDAO extends DAO
 {
@@ -73,4 +73,3 @@ public function selectCepByLogradouro($logradouro)
 }
 
 }
-
