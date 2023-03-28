@@ -53,7 +53,7 @@ public function selectCidadesByUf($uf)
 
 public function selectBairrosByIdCidade(int $id_cidade)
 {
-    $sql = "SELECT descricao_bairro FROM logradouro WHERE id_cidade GROUP BY descricao_bairro";
+    $sql = "SELECT descricao_bairro FROM logradouro WHERE id_cidade = ? GROUP BY descricao_bairro";
 
     $stmt = $this->conexao->prepare($sql);
     $stmt->bindValue(1, $id_cidade);

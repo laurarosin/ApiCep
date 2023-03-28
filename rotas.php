@@ -30,7 +30,7 @@ switch ($url)
  break;
 
  /**
-  * [OK] Exemplo de Acesso:
+  * [OK] Exemplo de Acesso: http://localhost:8000/bairro/by-cidade?id_cidade=200
   */
 
   case '/bairro/by-cidade':
