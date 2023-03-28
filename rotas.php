@@ -2,7 +2,7 @@
 
 use ApiCep\Controller\EnderecoController;
 
-$urI = parse_url($_SERVER['REQUEST_URl'], PHP_URL_PATH);
+$url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
 switch ($url) 
 {
@@ -23,9 +23,8 @@ switch ($url)
   break;
 
 /**
- * [OK] Exemplo de Acesso:
+ * [OK] Exemplo de Acesso: http://localhost:8000/cidade/by-uf?uf=SP
 */
-
  case '/cidade/by-uf':
     EnderecoController::getCidadesByUf();
  break;
