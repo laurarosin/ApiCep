@@ -47,6 +47,9 @@ class EnderecoModel extends Model
         {
             $dao= new EnderecoDAO();
             $this->rows = $dao->selectCepByLogradouro($logradouro);
+
+            
+
         }catch(Exception $e)
         {
             echo $e->getMessage();

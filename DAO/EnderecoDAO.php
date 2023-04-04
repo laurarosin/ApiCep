@@ -64,10 +64,11 @@ public function selectBairrosByIdCidade(int $id_cidade)
 
 public function selectCepByLogradouro($logradouro)
 {
-    $sql = "SELECT FROM logradouro WHERE descricao_sem_numero LIKE :q";
+    $sql = "SELECT * FROM logradouro WHERE descricao_sem_numero LIKE :q";
 
     $stmt = $this->conexao->prepare($sql);
     $stmt->execute([':q' => "%". $logradouro . "%"]);
+
 
     return $stmt->fetchAll(DAO::FETCH_CLASS);
 }

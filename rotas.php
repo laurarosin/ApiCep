@@ -37,6 +37,10 @@ switch ($url)
     EnderecoController::getBairrosByIdCidade();
  break;
 
+ case '/cep/by-logradouro':
+  EnderecoController::getCepByLogradouro();
+  break;
+
  default:
     http_response_code(403);
  break;
